@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body h1{
+            background-color: gray;
+        }
+         div h1{           /*    This is Descendant     */
+            background-color: aqua;
+        }
+        span+h1{               /* Adjacent sibling */
+            background-color: green;
+        }
+        div~h1{                /* general sibling  */
+            background-color: orange;
+        }
+        #ele{
+            background-color: brown;
+            height: 4rem;
+            text-align: center;
+            font-size: 30px;
+        }
+        #ele:hover{
+            background-color: rgb(208, 31, 31);
+            color: white;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+
+    <div id="ele">Hover me</div>
+
+    <div>
+        <!-- div>h1{Inside Div heading $}*3 -->
+        <div>
+            <h1>Inside Div heading 1</h1>
+            <h1>Inside Div heading 2</h1>
+            <h1>Inside Div heading 3</h1>
+
+            <span>
+                <h1>Inside Div heading 1</h1>
+                <h1>Inside Div heading 2</h1>
+                <h1>Inside Div heading 3</h1>
+            </span>
+            <h1>Outside span Heading 1</h1>
+        </div>
+
+        <h1>Outside Div Heading 1</h1>
+        <h1>Outside Div Heading 2</h1>
+        <h1>Outside Div Heading 3</h1>
+    </div>
+</body>
+
+</html>

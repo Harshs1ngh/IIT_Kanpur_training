@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h1{
+            display: none;
+        }
+
+        @media (orientation: landscape){
+            body{
+                background-color: red;
+            }
+            #myH1{
+                display: block;
+            }
+        }
+        @media (orientation: portrait){
+            body{
+                background-color: rgb(0, 255, 47);
+            }
+            #myH2{
+                display: block;
+            }
+        }
+
+        #myh1::before
+    {
+        content: 'Hi ';
+    }
+    #myh1::after{
+        content: ' bye...';
+    }
+    ul{
+        list-style-type: disc;
+    }
+    ::marker{
+        color: red;
+    }
+
+    input[placeholder='Enter Name'] , [id="cgp"] {
+        background-color: red;
+    }
+    input[placeholder='Enter Email']{
+        background-color: rgb(0, 255, 21);
+    }
+
+    #myh1{
+        /* border-width: 1px;
+        border-style: solid;
+        border-color: black; */
+        border-radius: 2rem 7rem 5rem;
+        border: 1px solid black;
+        padding: 10px 50px 10px 180px;
+    }
+
+    img{
+        width:40rem;
+        border-radius: 4rem;
+        margin: 0 auto;
+        padding: 10px;
+        display: block;
+    }
+
+    </style>
+</head>  
+<body>
+
+    <div id="ig">
+        <img src="../images/Screenshot 2026-01-05 105359.png">
+    </div>
+
+
+    <h1 id="myH1">Heading 1</h1>
+    <h1 id="myH2">Heading 2</h1>
+
+
+    <h1 id="myh1">CSS Demo</h1>
+
+    <input type="text" name="unm" placeholder="Enter Name" /> <br>
+    <input type="email" name="male" placeholder="Enter Email" /> <br>
+    <input id="cgp" type="number" name="cgpi" placeholder="Enter number" />
+
+    <h1 id="myh1">Demo page</h1>
+    <ul>
+        <li>list Item 1</li>
+        <li>list Item 2</li>
+        <li>list Item 3</li>
+        <li>list Item 4</li>
+        <li>list Item 5</li>
+    </ul>
+
+</body>
+</html>
