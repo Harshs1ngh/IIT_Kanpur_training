@@ -1,257 +1,71 @@
-﻿# IIT_Kanpur_training
+Day-Wise Topics Covered (10 Days)
 
-IIT Kanpur Winter Training – MERN Stack (15 Days)
+Day 1 – Web & MERN Fundamentals
+Introduction to Web Development
+Client–Server Architecture
+How the Internet Works
+HTTP vs HTTPS
+Overview of MERN Stack
 
-This repository contains my class notes and hands-on learning from the 15-day Winter Training Program at IIT Kanpur, focused on MERN Stack Development.
-The notes cover HTML, CSS, JavaScript, and MongoDB, with practical examples and commands used during training.
-
-🌐 HTML Basics
-Meta Tags
-
-Keywords (less impactful today, but still valid):
-
-<meta name="keywords" content="HTML, CSS, JavaScript">
-
-
-Description (important for SEO):
-
-<meta name="description" content="Brief summary of the webpage">
-
-
-Author:
-
-<meta name="author" content="John">
-
-
-Auto refresh page every 30 seconds:
-
-<meta http-equiv="refresh" content="30">
-
-Viewport
-
-Used to make websites responsive on all devices:
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+Day 2 – HTML Basics
+HTML Structure & Core Tags
+Meta Tags (SEO, viewport, author)
 Block vs Inline Elements
+Forms & Input Elements
+Semantic HTML
 
-Block elements: take full width and start on a new line
-Example: div, p
-
-Inline elements: take only required space
-Example: span, a
-
-🎨 CSS Fundamentals
+Day 3 – CSS Fundamentals
+CSS Syntax & Selectors
+Box Model
 Display vs Visibility
-
-display: none → element is removed and space is freed
-
-visibility: hidden → element is hidden but space remains
-
-CSS Selectors
-
-CSS selectors are used to select HTML elements for styling.
-
-Each selector contains properties inside { }.
-
-Types of Selectors
-
-Descendant Selector – selects elements inside a parent
-
-Adjacent Sibling Selector (+)
-
-General Sibling Selector (~) – selects all sibling elements after a given element
-
-Pseudo-elements
-
-Used to style specific parts of elements
-
-Not real HTML elements (not in DOM)
-
-Exist only for styling purposes
-Example:
-
-p::first-letter { font-size: 30px; }
-
-Common Class Names
-
-primary, secondary, info, warning, dark
-
-🗄️ MongoDB (NoSQL Database)
-Introduction
-
-MongoDB is a document-oriented NoSQL database offering:
-
-Schema flexibility
-
-High scalability
-
-High performance
-
-Basic Commands
-show databases
-use IIT-Kanpur
-db.createCollection("student1")
-
-Insert Documents
-db.Student1.insertOne({
-  name: "Harsh",
-  course: "BCA",
-  age: 19,
-  mobNo: 9090909090
-})
-
-db.Student1.insertMany([
-  { name: "Arjun", course: "BCA", email: "arjun@gmail.com" },
-  { name: "Arjun", course: "BCA", gender: "Male" },
-  { name: "Arjun", course: "BCA", hobbies: ["Playing", "Singing"] }
-])
-
-Find Documents
-db.Student1.find()
-db.Student1.find({}, { name: 1, age: 1, _id: 0 })
-
-
-⚠️ Projection rule: You cannot mix 1 and 0 (except _id).
-
-🔍 MongoDB Operators
-Comparison Operators
-
-$eq, $ne
-
-$gt, $gte
-
-$lt, $lte
-
-$in
-
-db.Student1.find({ name: { $in: ["Sachin", "Harsh"] } })
-
-Logical Operators
-db.Student1.find({
-  $and: [
-    { name: "Harsh" },
-    { age: { $gte: 19 } }
-  ]
-})
-
-$exists
-db.Student1.find({ hobbies: { $exists: true } })
-
-$type
-db.Student1.find({
-  email: { $type: "string", $eq: "arjun@gmail.com" }
-})
-
-📅 Date Handling in MongoDB
-
-Date() → returns string
-
-new Date() → returns date object
-
-ISODate() → returns date object
-
-$dateToString
-db.DemoCollection.find(
-  { dor: { $type: "date" } },
-  {
-    Date_of_Reg: {
-      $dateToString: {
-        date: "$dor",
-        format: "%d-%m-%Y %H:%M:%S",
-        timezone: "Asia/Kolkata"
-      }
-    }
-  }
-)
-
-✏️ Update Operations
-db.Student1.updateOne(
-  { name: "Arjun" },
-  { $set: { course: "BCA", age: 20 } }
-)
-
-Array Updates
-$push       // add value
-$addToSet  // add if not exists
-$pull      // remove value
-
-❌ Delete Operations
-db.Student1.deleteOne({ name: "Arjun" })
-db.Student1.deleteMany({ age: { $lt: 18 } })
-
-📊 Query Modifiers
-
-limit()
-
-db.Student1.find().limit(1)
-
-
-skip()
-
-db.Student1.find().skip(2)
-
-
-sort()
-
-db.Student1.find().sort({ name: 1 })
-
-🔗 Aggregation Pipeline
-Stages
-
-$match
-
-$group
-
-$sort
-
-$limit
-
-$sample
-
-db.employees.aggregate([
-  { $group: {
-      _id: "$department.name",
-      TotalEmployees: { $sum: 1 },
-      AverageSalary: { $avg: "$salary" }
-  }},
-  { $sort: { TotalEmployees: -1 } }
-])
-
-$unwind
-db.EmpData.aggregate([
-  { $unwind: "$skills" },
-  { $sortByCount: "$skills" }
-])
-
-🔎 Regular Expressions
-db.EmpData.find({ name: /^B/i })   // starts with B
-db.EmpData.find({ name: /b$/i })   // ends with b
-db.EmpData.find({ name: /ali/i })  // contains ali
-
-🟨 JavaScript Basics
-Alerts & Inputs
-alert("This is an alert");
-let r = prompt("Enter name", "Harsh");
-let h = confirm("Are you sure?");
-
-JavaScript Data Types
-
-null
-
-undefined
-
-NaN
-
-object
-
-bigint
-
-typeof undefined // "undefined"
-typeof null      // "object"
-
-NaN Rules
-
-Any operation with NaN returns NaN
-
-NaN !== NaN
+Colors, Units, Fonts
+Class Naming Conventions
+
+Day 4 – Advanced CSS
+Descendant & Sibling Selectors
+Pseudo-classes & Pseudo-elements
+Flexbox Basics
+Responsive Design
+Media Queries
+
+Day 5 – JavaScript Basics
+Introduction to JavaScript
+Variables & Data Types
+Operators
+alert, prompt, confirm
+Type Conversion
+
+Day 6 – JavaScript Core Concepts
+Conditional Statements
+Loops
+Functions
+Scope & Hoisting
+Arrays & Objects
+
+Day 7 – JavaScript Advanced Concepts
+Array & String Methods
+NaN, undefined, null
+Objects & Nested Data
+Basic DOM Manipulation
+Event Handling
+
+Day 8 – MongoDB Introduction
+NoSQL vs SQL
+MongoDB Architecture
+Databases & Collections
+CRUD Operations
+BSON Data Types
+
+Day 9 – MongoDB Queries & Operators
+find() with Filters & Projection
+Comparison & Logical Operators
+$exists, $type
+Sorting, Limiting & Skipping
+Regular Expressions
+
+Day 10 – MongoDB Advanced Concepts
+Date Handling (Date, ISODate)
+Update Operations ($set, $unset, $rename)
+Array Operations ($push, $pull, $addToSet)
+Aggregation Pipeline ($match, $group, $sort)
+Data Analysis Queries
