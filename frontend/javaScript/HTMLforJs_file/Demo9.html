@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+        // Example of filter from an array
+
+        let empData = [
+            {
+                emepId:1001,emepName:'Sachin',salary:50000
+            },
+            {
+                emepId:1002,emepName:'Virat',salary:70000
+            },
+            {
+                emepId:1003,emepName:'Akash',salary:30000
+            },
+            {
+                emepId:1004,emepName:'Yuvi',salary:75000
+            }
+        ]
+
+        let resArr = empData.filter((emp)=>{
+            return emp.salary >= 70000;
+        })
+
+        console.log(resArr);
+        
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+        let trans = [
+            {
+                type:'deposite' , amount:1000
+            } , 
+            {
+                type:'withdraw' , amount:200
+            } , 
+            {
+                type:'deposite' , amount:500
+            } , 
+
+            {
+                type:'withdraw' , amount:300
+            }      
+        
+        ];
+
+        let balance = 0;        
+        let r = trans.forEach(( t )=>{           
+
+            if(t.type == 'withdraw')
+                balance -= t.amount
+            else if (t.type == 'deposite')
+                balance += t.amount  
+            
+            t.balanceAmount = balance ;   
+            
+            console.log(t.type + ": " + t.amount + ", Balance :" + balance);
+        
+        })
+        
+        console.log("Final Balance: " + balance);
+        console.log(trans);
+        console.log(r);
+        
+         
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

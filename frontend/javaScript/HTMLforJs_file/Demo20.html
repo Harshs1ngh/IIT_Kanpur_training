@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        .clsA
+        {
+            background-color: aqua;;
+            color: darkblue;            
+        }
+
+        .clsB
+        {
+            text-align: center;
+            line-height: 100px;  
+            
+        }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+
+    
+    <h1 id="myH1" class="clsA" > JS Demo Page </h1> 
+    
+    <button onclick="myfun()">Button</button>
+    
+
+  
+    <script type="text/javascript">
+
+        function myfun()
+        {
+        let ele = document.getElementById('myH1');    
+        console.log(ele);
+        let csslist =  ele.classList;
+        //console.log(csslist);
+        // if(csslist.contains('clsA'))
+        //     csslist.add('clsB');
+        // else
+        // {
+        //     csslist.add('clsA');
+        //     csslist.add('clsB');
+        // }
+
+        csslist.toggle('clsB');
+        }
+
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

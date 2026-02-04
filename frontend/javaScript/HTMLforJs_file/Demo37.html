@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    
+    <script type="text/javascript">
+        
+        // Task 1 - Login 
+        // Task 2 - Orders 
+        //          Order ID
+        // Task 3 - Status         
+        let userData = [ 
+                            {
+                                empId:'Emp1001',
+                                empName:'Sachin',
+                                empMail:'sachin@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1002',
+                                empName:'virat',
+                                empMail:'kohli@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1003',
+                                empName:'Rahul',
+                                empMail:'sharma@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1004',
+                                empName:'John',
+                                empMail:'doe@gmail.com',
+                                empAge:43,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            }
+
+                        ];
+
+
+     function findData(empId , fn)
+     {            
+            console.log("Fetching Data for ID :" + empId);
+            setTimeout(()=>{                            
+                let r = userData.find((emp)=>{
+                            return emp.empId == empId;
+                        })                       
+                if(r)
+                {
+                    console.log(r);
+                    if(fn)                    
+                        fn()            
+                }
+                else    
+                    console.log("No Record Found...");                
+
+            },4000)            
+     }                           
+
+     // Callback Hell
+     findData('Emp1001',()=>
+     {
+            findData('Emp1002',()=>
+            {
+                findData("Emp1004")
+            })
+     })
+     
+     
+     
+     
+    //  findData('Emp1003')
+
+        
+    </script>
+    
+</head>
+<body>  
+    
+    <h1 style="text-align:center;background-color: red;">Async Demo Page</h1>
+
+    
+    
+    
+  
+    
+</body>
+</html>

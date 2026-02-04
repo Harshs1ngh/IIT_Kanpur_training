@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+
+        // reduce() – accumulating values into a single result
+
+
+        let empData = [
+            {
+                emepId:1001,emepName:'Sachin',salary_Rs:50000
+            },
+            {
+                emepId:1002,emepName:'Virat',salary_Rs:70000
+            },
+            {
+                emepId:1003,emepName:'Akash',salary_Rs:30000
+            },
+            {
+                emepId:1004,emepName:'Yuvi',salary_Rs:75000
+            }
+        ]
+
+        let arr = [11,22,33,44,55,66,77,88,99];
+        let sum = 0;
+        for(let cur of arr)
+        {
+            sum = sum + cur
+        }
+        console.log(sum);
+
+        // 
+        let res =  arr.reduce((sum , curr )=>{
+            return sum + curr
+         } , 0)
+
+         console.log(res);
+         
+
+        let TotalSalary = empData.reduce((TotalSalary , emp)=>{
+            return TotalSalary + emp.salary_Rs
+         },0)
+
+         console.log(TotalSalary);
+      
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+
+        //  sort() + comparator functions + immutability
+
+
+        let empData = [
+            {
+                empId:1001,empName:'Sachin',salary_Rs:50000
+            },
+            {
+                empId:1002,empName:'Virat',salary_Rs:70000
+            },
+            {
+                empId:1003,empName:'Akash',salary_Rs:30000
+            },
+            {
+                empId:1004,empName:'Yuvi',salary_Rs:75000
+            }
+        ]
+
+        // let arr = ["Banana" , "Guava" , "Apple","Pineapple"];
+        // console.log(arr);
+        
+        // let newArr =  arr.sort();
+        
+        // console.log(newArr);
+
+        // let arr = [5,3,1,7,11,21]; // [1,11,21 ,3,5,7, ]        
+        // let newArr =  arr.sort((a,b)=>a-b);
+        // console.log(newArr);
+
+
+        // let res =  empData.sort((a,b)=>a.salary_Rs - b.salary_Rs)
+        // console.log(res);
+
+        // let res =  empData.sort((a,b)=>a.empName.localeCompare(b.empName))
+        // console.log(res);
+        
+        // empData.sort((a,b)=>a.empName.localeCompare(b.empName))
+        // console.log(empData);
+
+        let res = [...empData].sort((a,b)=>a.empName.localeCompare(b.empName))
+        console.log(res);
+        console.log(empData);
+        
+
+        
+
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

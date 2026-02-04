@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    
+    <script type="text/javascript">
+    
+    let p =  new Promise((res , rej)=>{
+
+        setTimeout(()=>{
+
+            let isValid = true
+        
+        if(isValid)
+        {
+            res({uid:1001 , unm:'Virat'})
+        }
+        else
+        {
+           rej("Error...") 
+        }
+
+        } , 5000)
+    })
+
+    p.then((data)=>{
+        console.log(data);    
+    })
+    .catch((error)=>{
+        console.log("Error : " + error)       
+    })
+    .finally(()=>{
+        console.log("Finally Block...");
+        
+    })
+
+
+       
+     
+     
+    
+
+        
+    </script>
+    
+</head>
+<body>  
+    
+    <h1 style="text-align:center;background-color: red;">Async Demo Page</h1>
+
+    
+    
+    
+  
+    
+</body>
+</html>

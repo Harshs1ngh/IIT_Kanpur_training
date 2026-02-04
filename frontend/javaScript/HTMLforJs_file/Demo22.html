@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style type="text/css">  
+    .fb
+    {
+        color: blue;
+        font-size: 40px;
+        background-color: aqua;
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/7f2595a60e.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        function myfun()
+        {
+            let radios = document.getElementsByName("gender");
+            for(let radio of radios)
+            {
+                // console.log(radio);
+                // console.log(radio.checked);
+                // console.log(radio.value);
+                if(radio.checked)
+                    console.log(radio.value);
+                    
+                
+            }
+            
+            
+        }     
+        
+        
+        
+
+    </script>
+    
+</head>
+<body>
+
+    
+    <h1> JS Demo Page </h1> 
+    
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="female">Female
+    
+    
+    <button id="mybtn" onclick="myfun()">               
+        Button       
+    </button>
+    
+  
+    
+</body>
+</html>

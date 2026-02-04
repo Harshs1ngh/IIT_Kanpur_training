@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+
+        let userData = {
+            userId   : 1001,
+            userName : 'Sachin',
+            userEmail: 'sachin@gmail.com',
+            userAge  : 45,
+            myfun1   : function()
+            {
+                console.log("My Fun 1..." );                
+                console.log("User Name : " + this );                
+            },
+            myfun2()
+            {
+                console.log("My Fun 2..."); 
+                console.log("User Name : " + this );                
+            },
+            myfun3 : ()=>{
+                console.log("My Fun 3...");
+                console.log("User Name : " + this );                 
+            }
+        }
+
+        console.log(userData);
+        console.log(userData['userName']);
+        console.log(userData.userAge);
+        userData.myfun1()
+        userData.myfun2()
+        userData.myfun3()
+
+        //userData.mobNo=9090909090;
+        userData["mobNo"]=9090909090;
+
+        userData.userName="Virat";
+        userData["userEmail"]="kohli@gmail.com";
+
+        console.log(userData);
+        
+        
+        
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+
+        let name = "Sachin";
+        let email = 'sachin@gmail.com';
+
+        console.log("Welcome "+name+" Email ID is "+email);
+
+        let msg = `Welcome "${name}" Email ID is '${email}' ` ;
+        console.log(msg);
+
+        let str = 'A quick brown fox jumps over the lazy dog';
+        console.log(str.includes("fox"));
+
+        let emails = ['demomail1@yahoo.com','demomail2@yahoo.co.in','demomail@yahoo.gov'];
+        for(let email of emails)
+        {
+                if(email.endsWith(".gov"))
+                    console.log(email);                    
+        }
+
+        let s = "    hello   ";
+        console.log(s);
+        console.log(s.trim());
+        console.log(s.trimStart());
+        console.log(s.trimEnd());
+
+        let r = str.split("o");
+        console.log(r);
+
+        r = str.replace("fox" , "cat")
+
+        console.log(r);
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>

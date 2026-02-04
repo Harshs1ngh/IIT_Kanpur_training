@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    
+    <script type="text/javascript">
+        
+        // Task 1 - Login 
+        // Task 2 - Orders 
+        //          Order ID
+        // Task 3 - Status         
+        let userData = [ 
+                            {
+                                empId:'Emp1001',
+                                empName:'Sachin',
+                                empMail:'sachin@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1002',
+                                empName:'virat',
+                                empMail:'kohli@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1003',
+                                empName:'Rahul',
+                                empMail:'sharma@gmail.com',
+                                empAge:47,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            },
+                            {
+                                empId:'Emp1004',
+                                empName:'John',
+                                empMail:'doe@gmail.com',
+                                empAge:43,
+                                empDept:'IT',
+                                empCity:'Mumbai'
+                            }
+
+                        ];
+
+
+     function findData(empId)
+     {  
+        
+        let promise = new Promise(( resolve , reject  )=>
+        {
+            console.log("Fetching Data for ID :" + empId);
+            setTimeout(()=>{                            
+                let uData = userData.find((emp)=>
+                        {
+                            return emp.empId == empId;
+                        })                       
+                if(uData)
+                {
+                    resolve(uData)                                
+                }
+                else    
+                    reject("No Record Found...");                
+
+            },4000)            
+
+        })  
+        return promise                   
+     }   
+
+
+     
+    function demofun(millisec) 
+    {
+            setTimeout(()=>{
+                console.log("Inside Demo function.... :)");
+                
+            },millisec)
+    }
+     
+    async function myfun()
+     {
+        console.log("Start of function...");        
+        await demofun(2000)
+        console.log("End of function...");        
+     }
+     
+     let r = myfun()
+     
+     
+
+
+
+    
+     // Promise Chaining...
+    // findData('Emp1001')
+    // .then((UserData)=>
+    // {
+    //     console.log(UserData);
+    //     return findData('Emp1012') //Promise                
+    // })
+    // .then((UserData)=>{
+    //     console.log(UserData); 
+    //     return findData('Emp1003')       
+    // })
+    // .then((userData)=>{
+    //     console.log(userData);        
+    // })
+    // .catch((error)=>
+    // {
+    //     console.log(error);        
+    // })
+
+    
+    
+
+
+     
+
+        
+    </script>
+    
+</head>
+<body>  
+    
+    <h1 style="text-align:center;background-color: red;">Async Demo Page</h1>
+
+    
+    
+    
+  
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+
+        // filter() + map() (Real-world data processing)
+
+
+        let empData = [
+            {
+                emepId:1001,emepName:'Sachin',salary_Rs:50000
+            },
+            {
+                emepId:1002,emepName:'Virat',salary_Rs:70000
+            },
+            {
+                emepId:1003,emepName:'Akash',salary_Rs:30000
+            },
+            {
+                emepId:1004,emepName:'Yuvi',salary_Rs:75000
+            }
+        ]
+
+        const USD_to_RS = 90;
+        // let updEmpData =  empData.map((emp)=>{
+
+        //     return { ...emp ,salary_USD : Math.round(emp.salary_Rs/USD_to_RS)}
+
+        // })
+
+        // console.log(updEmpData);
+
+        // let res = empData.filter((emp)=>{
+        //     return emp.salary_Rs >=50000;
+        // })
+
+        // let upd =res.map((emp)=>{
+        //     return { ...emp ,salary_USD : Math.round(emp.salary_Rs/USD_to_RS)}
+        // })
+
+        // console.log(upd);
+        
+        
+        let updData = empData.filter((emp)=>{
+            return emp.salary_Rs >= 50000;
+        }).map((emp)=>{
+            return { ...emp ,salary_USD : Math.round(emp.salary_Rs/USD_to_RS)}
+        })
+        
+
+        console.log(updData);
+        console.log(empData);
+        
+        
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+</body>
+</html>
