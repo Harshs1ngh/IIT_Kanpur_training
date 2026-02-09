@@ -1,0 +1,12 @@
+npm install moduleName
+    eg : npm install express
+
+npm i moduleName -save
+npm list
+npm list -g (-g => global)
+
+npm i modulename -g
+npm uninstall modulename 
+
+// to Add development dependency
+npm i nodemon -save-dev
